@@ -29,10 +29,11 @@ s_head=re.sub(',$', '\n', s_head)
 #print(s_head)
 f.write(s_head)
 
-
+if ll < 2 :
+  ll=2
 for num in range(ll,nn+1):
-  if num < 2 :
-    continue
+#  if num < 2 :
+#    continue
   url = "https://api.mainnet.minepi.com/ledgers/" + str(num) + "/operations?limit=110"
 
   #url = "https://api.mainnet.minepi.com/ledgers/4712031/operations"
